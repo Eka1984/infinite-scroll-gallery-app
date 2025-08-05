@@ -1,27 +1,4 @@
-/* App.css */
-
-.app-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 2.5rem;
-  margin: 0;
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #e7e7e7;
-}
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  max-width: 1200px;
-  width: min(100%, 1200px);
-  margin: 0 auto;
-}
-
-.photo-card {
+.photoCard {
   position: relative;
   overflow: hidden;
   border-radius: 6px;
@@ -29,7 +6,7 @@
   aspect-ratio: 4 / 3;
 }
 
-.photo-card img {
+.photoCard img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -53,12 +30,12 @@
   box-sizing: border-box;
 }
 
-.photo-card:hover .overlay {
+.photoCard:hover .overlay {
   opacity: 1;
   pointer-events: auto;
 }
 
-.favourite-button {
+.favouriteButton {
   position: absolute;
   bottom: 1rem;
   left: 50%;
@@ -77,18 +54,18 @@
   z-index: 2;
 }
 
-.photo-card:hover .favourite-button {
+.photoCard:hover .favouriteButton {
   opacity: 1;
 }
 
-.photo-card.favourited .favourite-button {
+.photoCard.favourited .favouriteButton {
   opacity: 1;
   background-color: white;
   color: black;
   border: 1px solid white;
 }
 
-.photo-info {
+.photoInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,7 +79,7 @@
   justify-content: center;
 }
 
-.photo-info .title {
+.photoInfo .title {
   font-weight: 800;
   font-size: 2rem;
   margin: 0;
@@ -115,7 +92,7 @@
   line-height: 1.2;
 }
 
-.photo-info .author {
+.photoInfo .author {
   font-style: italic;
   font-size: 1.8rem;
   margin: 0;
@@ -131,42 +108,17 @@
   height: 20%;
 }
 
-/* Extra large screen: over 1800px */
-@media (min-width: 1800px) {
-  .photo-grid {
-    max-width: 1600px;
-    width: min(100%, 1600px);
-  }
-}
-
-/* Large screen: 1440px–1800px */
-@media (min-width: 1440px) {
-  .photo-grid {
-    max-width: 1400px;
-    width: min(100%, 1400px);
-  }
-}
-
 /* Tablet: 768px–1199px */
 @media (max-width: 1199px) {
-  .photo-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  .app-container {
-    padding: 2rem;
-  }
-
-  .photo-info .title {
+  .photoInfo .title {
     font-size: 1.4rem;
   }
 
-  .photo-info .author {
+  .photoInfo .author {
     font-size: 1.2rem;
   }
 
-  .favourite-button {
+  .favouriteButton {
     width: 50%;
     font-size: 1.2rem;
     padding: 0.6rem 0;
@@ -175,17 +127,5 @@
   .overlay {
     padding: 1rem;
     padding-bottom: 4rem;
-  }
-}
-
-/* Mobile: 0–767px */
-@media (max-width: 767px) {
-  .photo-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .app-container {
-    padding: 1.5rem;
   }
 }

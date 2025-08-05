@@ -1,4 +1,5 @@
 import type { Photo } from "../types/photo";
+import styles from "./ImageCard.module.css";
 
 export interface ImageCardProps {
   photo: Photo;
@@ -8,7 +9,9 @@ export interface ImageCardProps {
 
 function ImageCard({ photo, isFavourited, onToggleFavourite }: ImageCardProps) {
   return (
-    <div className={`photo-card ${isFavourited ? "favourited" : ""}`}>
+    <div
+      className={`${styles.photoCard} ${isFavourited ? styles.favourited : ""}`}
+    >
       <img
         src={photo.src.medium}
         srcSet={`
@@ -22,19 +25,23 @@ function ImageCard({ photo, isFavourited, onToggleFavourite }: ImageCardProps) {
         alt={photo.alt || "Pexels photo"}
         loading="lazy"
       />
-      <div className="overlay">
-        <div className="placeholder"></div>
+      <div className={styles.overlay}>
+        <div className={styles.placeholder}></div>
 
-        <div className="photo-info">
-          <p className="title" title={photo.alt || "Untitled"}>
+        <div className={styles.photoInfo}>
+          <p className={styles.title} title={photo.alt || "Untitled"}>
             {photo.alt || "Untitled"}
           </p>
-          <div className="divider" />
-          <p className="author">{photo.photographer || "Unknown Author"}</p>
+          <div className={styles.divider} />
+          <p className={styles.author}>
+            {photo.photographer || "Unknown Author"}
+          </p>
         </div>
       </div>
       <button
-        className={`favourite-button ${isFavourited ? "visible" : ""}`}
+        className={`${styles.favouriteButton} ${
+          isFavourited ? styles.visible : ""
+        }`}
         onClick={() => onToggleFavourite(photo.id)}
       >
         Favourite

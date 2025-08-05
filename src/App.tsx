@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchPhotos } from "./utils/pexelsApi";
 import ImageCard from "./components/ImageCard";
-import "./App.css";
+import styles from "./App.module.css";
 import type { Photo } from "./types/photo";
 
 function App() {
@@ -64,8 +64,8 @@ function App() {
   };
 
   return (
-    <div className="app-container">
-      <div className="photo-grid">
+    <div className={styles.appContainer}>
+      <div className={styles.photoGrid}>
         {photos.map((photo) => (
           <ImageCard
             key={photo.id}
