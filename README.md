@@ -21,8 +21,8 @@ This project uses [Vite](https://vite.dev/) with React and npm.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/name.git
-cd name
+git clone https://github.com/Eka1984/infinite-scroll-gallery-app.git
+cd infinite-scroll-gallery-app
 
 ```
 
@@ -48,23 +48,28 @@ npm run dev
 
 ```bash
 src/
-├── components/ # UI components
-│ ├── tests/ # Tests for components
-│ └── ImageCard.tsx
-├── types/ # TypeScript types
-│ └── photo.ts
-├── utils/ # Utility functions
-│ └── tests/ # Tests for utils
-│ └── pexelsApi.ts
-├── App.css
+├── components/               # UI components
+│   ├── __tests__/           # Tests for components
+│   ├── ImageCard.module.css
+│   └── ImageCard.tsx
+├── hooks/                   # Custom React hooks
+│   ├── useInfinitePhotos.ts
+│   ├── useLocalFavourites.ts
+│   └── useScrollToBottom.ts
+├── types/                   # TypeScript types
+│   └── photo.ts
+├── utils/                   # Utility functions
+│   ├── __tests__/           # Tests for utils
+│   └── pexelsApi.ts
+├── App.module.css
 ├── App.tsx
 ├── index.css
 ├── main.tsx
 ├── setupTests.ts
-├── vite-env.d.ts
+└── vite-env.d.ts
 
 root/
-├── .env # Contains the Pexels API key (included per instructions)
+├── .env # Contains the Pexels API key
 ├── .gitignore
 ├── eslint.config.js
 ├── homework-assignment.md
@@ -95,7 +100,7 @@ npx vitest
 
 - **React + Vite**
 - **TypeScript**
-- **CSS**
+- **CSS Modules**
 - **Vitest** (for testing)
 - **localStorage API**
 - **Pexels API**
@@ -105,8 +110,6 @@ npx vitest
 ## 💬 Final Thoughts
 
 This assignment was a fun challenge and a great opportunity to apply skills I already had some experience with, like React, APIs, and responsive web design, while also developing new ones. I got to dive deeper into TypeScript, try out testing with Vitest, and implement features like infinite scroll and responsive images for the first time.
-
-Thanks to the detailed instructions, the process was smooth, educational, and genuinely enjoyable.
 
 Thanks for checking it out!
 
