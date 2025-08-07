@@ -34,7 +34,20 @@ npm install
 
 ```
 
-### 3. Start the development server
+### 3. Create a .env file
+
+To access the Pexels API, create a .env file in the root of the project and add your API key:
+
+```bash
+
+VITE_PEXELS_API_KEY=your_pexels_api_key_here
+
+```
+
+You can get your API key by signing up at pexels.com/api.
+⚠️ Do not commit this file to version control.
+
+### 4. Start the development server
 
 ```bash
 
@@ -69,7 +82,6 @@ src/
 └── vite-env.d.ts
 
 root/
-├── .env # Contains the Pexels API key
 ├── .gitignore
 ├── eslint.config.js
 ├── homework-assignment.md
