@@ -129,4 +129,6 @@ Thanks for checking it out!
 
 ## 🎬 Demo
 
+You can try the app live here: [infinite-scroll-gallery-app](https://infinite-scroll-gallery-app.vercel.app/)
+
 ![Demo of the app](public/demo.gif)
