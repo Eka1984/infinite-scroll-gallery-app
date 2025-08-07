@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import ImageCard from "../ImageCard";
 import type { Photo } from "../../types/photo";
-
+import styles from "../ImageCard.module.css";
 
 const mockPhoto: Photo = {
   id: 123,
@@ -12,7 +12,7 @@ const mockPhoto: Photo = {
     large2x: "large.jpg",
   },
   alt: "A test photo",
-  photographer: "Katya", 
+  photographer: "Katya",
 };
 
 describe("ImageCard", () => {
@@ -57,7 +57,7 @@ describe("ImageCard", () => {
       />
     );
 
-    expect(container.firstChild).toHaveClass("favourited");
+    expect(container.firstChild).toHaveClass(styles.favourited);
   });
 
   it("displays photographer name", () => {
