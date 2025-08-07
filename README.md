@@ -4,7 +4,7 @@ A responsive photo feed app built with React and Vite. It fetches images from th
 
 ---
 
-## 🚀 Features
+## 💡 Features
 
 - Infinite scroll photo loading
 - Favourite toggle with persistent state
